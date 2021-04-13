@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Torque2HA!</string>
+    <string name="app_name">Torque 2 HA</string>
+    <string name="unable_to_connect_to_torque">Unable to connect to Torque plugin service</string>
+    <string name="pid_name">%1$s [%2$s]</string>
+</resources>

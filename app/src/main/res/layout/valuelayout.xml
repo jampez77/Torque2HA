@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="?android:attr/listPreferredItemHeight"
+  android:id="@+id/main_layout"
+  android:padding="6dip">
+    
+    <ImageView
+      android:id="@+id/aicon"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginRight="6dip"
+      android:layout_marginEnd="16dip"/>
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_toLeftOf="@+id/aicon"
+      android:layout_toStartOf="@+id/aicon"
+      android:id="@+id/aLinearLayout01"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+        <TextView
+          android:layout_height="wrap_content"
+          android:text="@+id/afirstLine"
+          android:layout_width="match_parent"
+          android:id="@+id/afirstLine"
+          android:textSize="16sp"
+          android:textColor="#ffffff"/>
+
+        <TextView
+          android:layout_height="wrap_content"
+          android:text="@+id/asecondLine"
+          android:layout_width="match_parent"
+          android:id="@+id/asecondLine"/>
+
+        <TextView
+          android:layout_height="wrap_content"
+          android:text="@+id/athirdLine"
+          android:layout_width="match_parent"
+          android:id="@+id/athirdLine"
+          android:textColor="#00c4ff"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
