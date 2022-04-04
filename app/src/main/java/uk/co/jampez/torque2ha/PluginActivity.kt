@@ -26,6 +26,8 @@ import java.util.*
 import kotlin.collections.ArrayList
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import kotlinx.android.synthetic.main.main.*
+import org.apache.commons.net.telnet.TelnetClient
+import java.io.PrintStream
 
 /**
  * This is a very rough, sample plugin that displays a list of all the currently available
@@ -84,6 +86,22 @@ class PluginActivity : AppCompatActivity() {
             textview!!.visibility = VISIBLE
             textview!!.text = getString(R.string.unable_to_connect_to_torque)
         }
+    }
+
+    fun telnetCommands(){
+        Thread{
+            val telnet = TelnetClient()
+            telnet.connect("10.0.2.2", 5554)
+            val out = PrintStream(telnet.outputStream)
+            out.println("auth yavQqdsKRDOl1Z6W")
+            out.println("sensor set acceleration 0:0:0")
+            Thread.sleep(1000)
+            out.println("sensor set acceleration 99:99:99")
+            Thread.sleep(1000)
+            out.println("sensor set acceleration 0:0:0")
+            out.flush()
+            telnet.disconnect()
+        }.start()
     }
 
     override fun onPause() {
